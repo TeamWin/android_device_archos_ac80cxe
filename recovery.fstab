@@ -1,0 +1,9 @@
+/boot            emmc              /dev/bootimg
+/system          ext4              /emmc@android
+/data	         ext4              /emmc@usrdata flags=encryptable=footer
+/cache	         ext4              /emmc@cache
+/recovery        emmc              /dev/recovery flags=backup=1
+/protect_f       emmc              /emmc@protect_s flags=backup=1
+/protect_s       emmc              /emmc@protect_s flags=backup=1
+
+/external_sd     vfat              /dev/block/mmcblk1p1  /dev/block/mmcblk1
